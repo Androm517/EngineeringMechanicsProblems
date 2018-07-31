@@ -1,5 +1,6 @@
 from numpy import matrix, pi, sqrt, array
 
+
 def IBarA(mass, length):
     coeff = 1./12 * mass * length**2
     I = [[coeff, 0, 0], [0, 0, 0], [0, 0, coeff]]
@@ -28,10 +29,10 @@ I_B_cm = IBarB(5000, 20)
 I_A = I_A_cm + parrallelAxisBar(5000, -5, 5, 0)
 I_B = I_B_cm + parrallelAxisBar(5000, 5, -5, 0)
 I = I_A + I_B
-print("Inertia matrix I")
-print(I)
 
-omega = [pi / 600., 0, 0]
+one_revolution_in_radians = 2 * pi
+one_revolution_in_seconds = 600.
+omega = [one_revolution_in_radians / one_revolution_in_seconds, 0, 0]
 stor_omega = [[0, -omega[2], omega[1]],
               [omega[2], 0, -omega[0]],
               [-omega[1], omega[0], 0]]
