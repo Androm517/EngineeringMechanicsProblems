@@ -22,9 +22,6 @@ I = I_bar + I_bar_displacement + I_disk + I_disk_displacement
 I = array([[I[0, 0], -I[0, 1], -I[0, 2]],
            [-I[1, 0], I[1, 1], -I[1, 2]],
            [-I[2, 0], -I[2, 1], I[2, 2]]])
-print(I)
 alpha = solve(I, M)
-print('Angular acceleration is')
-print(alpha)
-print("Magnitude of angular acceleration is")
-print(sqrt(alpha.dot(alpha)))
+print('Angular acceleration is: ', alpha)
+print("Magnitude of angular acceleration is: ", sqrt(alpha.dot(alpha)))
